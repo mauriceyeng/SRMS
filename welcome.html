@@ -5,15 +5,121 @@
         </title>
 
         <style>
+            body{
+                background-color: lightgoldenrodyellow;
+            }
+            ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: crimson;
+            }
+
+            li {
+            float: left;
+            font-family: sans-serif;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+            div{
+                display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+            li a:hover {
+            background-color: darkred;
+            }
+
+            #v {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 200px;
+                background-color: red;
+            }
+            #v  li a {
+            display: block;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            }
+
+            
+            #v  li a:hover {
+            background-color: white;
+            color: red;
+            }
+             
+            h3{
+                margin-left: 20px;
+                font-family: sans-serif;
+            }
+            
             
         </style>
+        <script>
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  
+              return i;
+            }
+            function show()
+            {
+                window.alert("Welcome to SRMS");
+            }
+            function warning()
+            {
+                window.alert("Sucessfully logged out of SRMS");
+            }
+            function refresh()
+            {
+                window.alert("Refreshing page...");
+            }
+            </script>
 
 
 
 
     </head>
-    <body>
-        <h1></h1>
+    <body onload="startTime()">
+        <ul>
+            <li><a class="active" href="welcome.html" onclick="refresh()">SRMS</a></li>
+            
+            <li><a href="#news" onclick="show()">WELCOME ADMIN</a></li>
+            <li><a href="contact.html">CONTACT DEVELOPER</a></li>
+            <li><a href="search.html">SEARCH</a></li>            
+            <li style="float:right"><a href="index.html" onclick="warning()">LOGOUT</a></li>
+          </ul>
+          <h3>MENU</h3>
+          <ul id="v">
+                <li id="v"><div id="txt"></div></li>
+                <li id="v"><a href="#home">DASHBOARD</a></li>
+                 <li id="v"><a href="#news">MANAGE STUDENTS</a></li>
+                 <li id="v"><a href="#contact">ADD STUDENTS</a></li>
+              
+           
+            
+          </ul>
     </body>
 
 
