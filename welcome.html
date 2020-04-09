@@ -40,31 +40,39 @@
             background-color: darkred;
             }
 
-            #v {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                width: 200px;
-                background-color: red;
-            }
-            #v  li a {
-            display: block;
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            }
-
-            
-            #v  li a:hover {
-            background-color: white;
-            color: red;
-            }
+         
              
             h3{
                 margin-left: 20px;
                 font-family: sans-serif;
             }
-            
+            h1{
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                text-align: center;
+                color: darkred;
+            }
+            hr{
+                background-color: brown;
+                width: 400px;
+                height: 2mm;
+                border-radius: 5px;
+            }
+                img{
+                border: 10px solid crimson;
+                margin: 0px;
+                padding: 5px;
+                height: 60%;
+                position: relative;
+                right: 0px;
+                
+            }
+                .demo1{
+                    height: 55%;
+                    
+                }
+                .demo2{
+                    height: 60%;
+                }
             
         </style>
         <script>
@@ -95,6 +103,18 @@
             {
                 window.alert("Refreshing page...");
             }
+            function f()
+            {
+                var element=document.getElementById("demo");
+                element.classList.toggle("demo2");
+
+            }
+            function f1()
+            {
+                var element=document.getElementById("demo1");
+                element.classList.toggle("demo2");
+
+            }
             </script>
 
 
@@ -105,21 +125,23 @@
         <ul>
             <li><a class="active" href="welcome.html" onclick="refresh()">SRMS</a></li>
             
-            <li><a href="#news" onclick="show()">WELCOME ADMIN</a></li>
+            
             <li><a href="contact.html">CONTACT DEVELOPER</a></li>
             <li><a href="search.html">SEARCH</a></li>            
             <li style="float:right"><a href="index.html" onclick="warning()">LOGOUT</a></li>
+            <li style="float: right"><div id="txt"></div></li>
           </ul>
-          <h3>MENU</h3>
-          <ul id="v">
-                <li id="v"><div id="txt"></div></li>
-                <li id="v"><a href="#home">DASHBOARD</a></li>
-                 <li id="v"><a href="#news">MANAGE STUDENTS</a></li>
-                 <li id="v"><a href="#contact">ADD STUDENTS</a></li>
-              
-           
-            
-          </ul>
+          <br>
+          <hr>
+          <h1>SRMS DASHBOARD</h1>
+          <hr>
+          <br>
+          <h3 align="center">CHOOSE AN OPTION</h3>
+          <div>
+              <a href="add.html"><img src="ADD1.jpg" id="demo" class="demo1" onmouseover="f()" onmouseout="f()"></a>
+              <a href="manage.html"><img src="MANAGE.jpg" id="demo1" class="demo1" onmouseover="f1()" onmouseout="f()"></a>
+          </div>
+          
     </body>
 
 
