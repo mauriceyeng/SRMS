@@ -16,8 +16,59 @@
                     text-align: center;
                     color: darkred;
                 }
+                input[type=text], select {
+                width: 30%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid red;
+                border-radius: 4px;
+                box-sizing: border-box;
+                
+                }
+                input[type=number], select {
+                width: 30%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid red;
+                border-radius: 4px;
+                box-sizing: border-box;
+                
+                }
+                input[type=radio], select {
+                margin-left: 15pc;                
+                              
+                
+                
+                }
+                input[type=submit] {
+                width: 10%;
+                background-color:crimson;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                
+                
+                }
+
+                input[type=submit]:hover {
+                background-color: red;
+                }  
+                h4{
+                font-family: Arial, Helvetica, sans-serif;
+                color: crimson;
+                margin-left: 5pc;
+                
+            }
 
         </style>
+        <script>
+            
+        </script>
     </head>
     <body>
         <h3><a href="welcome.html">BACK|</a><a href="index.html">|HOMEPAGE</a></h3>
@@ -26,6 +77,15 @@
         <h1>ADD STUDENTS</h1>
         <hr>
         <br><br>
+        <form action="display()">
+            <h4>ENTER NAME: <input type="text" placeholder="Enter name"> </h4>
+            <h4>ENTER REGISTRATION NUMBER: <input type="number" placeholder="Enter Reg number"> </h4>
+            <h4>CHOOSE GENDER: <br>
+                <input type="radio" name="gender" value="male" checked>Male<br>
+                <input type="radio" name="gender" value="female">Female<br>
+                <input type="radio" name="gender" value="other">Other<br></h4>
+            
+        </form>
         
     </body>
 </html>
