@@ -17,7 +17,17 @@
                     color: darkred;
                 }
                 input[type=text], select {
-                width: 30%;
+                width: 42%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid red;
+                border-radius: 4px;
+                box-sizing: border-box;
+                
+                }
+                input[type=date], select {
+                width: 10%;
                 padding: 12px 20px;
                 margin: 8px 0;
                 display: inline-block;
@@ -37,7 +47,7 @@
                 
                 }
                 input[type=radio], select {
-                margin-left: 15pc;                
+                margin-left: 10pc;                
                               
                 
                 
@@ -64,9 +74,46 @@
                 margin-left: 5pc;
                 
             }
+            input[type=submit]{
+            background-color: crimson;
+            border: red;
+            border-radius: 6px;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-left: 5pc;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: grab;
+            }
+            input[type=submit]:hover 
+            {
+               opacity: 2
+              
+            }
 
         </style>
-        <script>
+        <script>    
+        var a,b,c,d;
+            function display()
+            {
+                
+                 a=document.getElementById('n').value;
+                 b=document.getElementById('nm').value;
+                 c=document.getElementById('dt').value;
+
+                 if(a&&b && a&&c)               
+                {
+                    window.alert("Thank you for submitting");
+                }
+                           
+               
+            }
+            
             
         </script>
     </head>
@@ -77,14 +124,18 @@
         <h1>ADD STUDENTS</h1>
         <hr>
         <br><br>
-        <form action="display()">
-            <h4>ENTER NAME: <input type="text" placeholder="Enter name"> </h4>
-            <h4>ENTER REGISTRATION NUMBER: <input type="number" placeholder="Enter Reg number"> </h4>
-            <h4>CHOOSE GENDER: <br>
-                <input type="radio" name="gender" value="male" checked>Male<br>
-                <input type="radio" name="gender" value="female">Female<br>
-                <input type="radio" name="gender" value="other">Other<br></h4>
+        <form onsubmit="display()">
+            <h4>ENTER NAME: <input type="text" placeholder="Enter name" required id="n"> </h4>
+            <h4>ENTER REGISTRATION NUMBER: <input type="number" placeholder="Enter Reg number" required id="nm"> </h4>
+            <h4>ENTER YEAR OF ADMISSION: <input type="date" placeholder="Enter date of admission" required id="dt"> </h4>
             
+                <h4>CHOOSE GENDER: <br>
+                    <input type="radio" name="gender" value="male" required class="c">Male<br>
+                    <input type="radio" name="gender" value="female" required class="c">Female<br>
+                    <input type="radio" name="gender" value="other" required class="c">Other<br></h4>
+               
+            
+            <input type="submit" value="Submit">
         </form>
         
     </body>
